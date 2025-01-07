@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# README
 
-## Getting Started
+## Proyecto: Sistema de Alarma y Detección Inteligente de Armas de Fuego mediante Análisis de Video con Tecnología IoT
 
-First, run the development server:
+Este proyecto es parte de mi tesis titulada “DESARROLLO DE UN SISTEMA DE ALARMA Y DETECCIÓN INTELIGENTE DE ARMAS DE FUEGO MEDIANTE ANÁLISIS DE VIDEO CON TECNOLOGÍA IOT”, desarrollado utilizando Next.js en el frontend.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Despliegue del Proyecto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para desplegar este proyecto de Next.js, sigue los siguientes pasos:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/joffx/tesis-proyecto-ups.git
+   cd tu-repositorio
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Instalar dependencias:**
+   Asegúrate de tener `npm` o `yarn` instalado. Luego, ejecuta:
+   ```bash
+   npm install
+   # o
+   yarn install
+   ```
 
-## Learn More
+3. **Configurar variables de entorno:**
+   Crea un archivo `.env` en la raíz del proyecto y añade las variables necesarias para tu configuración.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Ejecutar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   ```
+   El proyecto estará disponible en [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Construir para producción:**
+   Para construir el proyecto para producción, ejecuta:
+   ```bash
+   npm run build
+   # o
+   yarn build
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+6. **Iniciar el servidor en producción:**
+   Después de construir, inicia el servidor con:
+   ```bash
+   npm run start
+   # o
+   yarn start
+   ```
 
-## Deploy on Vercel
+### Tecnologías Utilizadas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js**: Framework de React para la creación de aplicaciones web modernas.
+- **IoT**: Integración con tecnologías de Internet de las Cosas para la detección de armas de fuego.
+- **Análisis de Video**: Implementación de algoritmos de análisis de video para la detección inteligente.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este proyecto representa un paso significativo en la mejora de la seguridad mediante el uso de tecnologías avanzadas y la integración de sistemas IoT con análisis de video.
+
