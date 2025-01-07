@@ -10,11 +10,28 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { DoorOpenIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
+  const [bodylogin, setBodyLogin] = useState({
+    email: "",
+    password: "",
+  });
+
+  const loginApi = (email: string, password: string) => {
+    if (email === "jvelozp@est.ups.edu.ec" && password === "Abc123") {
+      router.push("/dashboard");
+    }else{
+      tona
+    }
+    
+  };
+
+  const router = useRouter();
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
@@ -49,7 +66,7 @@ export function LoginForm({
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button onClick={} type="submit" className="w-full">
                   <DoorOpenIcon className="w-4 h-4" />
                   <span>Iniciar Sesión</span>
                 </Button>
