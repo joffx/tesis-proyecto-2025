@@ -80,7 +80,7 @@ export function LoginForm() {
           </div>
         </CardContent>
       </Card>
-      <div className="text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary  ">
+      <div className="mt-3 text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary  ">
         Autor: <a href="#">Joffre Andres Veloz Pazmiño</a>{" "}
       </div>
     </div>
