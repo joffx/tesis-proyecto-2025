@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A custom project for fast and efficient solutions.",
   "author": "Joffre Veloz <joffre.veloz@fastery.dev>",
-  "private": true,
+  "private": false,
   "license": "Proprietary",
   "engines": {
     "node": "20.x"
