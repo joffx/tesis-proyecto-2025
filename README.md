@@ -1,5 +1,3 @@
-# README
-
 ## Proyecto: Sistema de Alarma y Detección Inteligente de Armas de Fuego mediante Análisis de Video con Tecnología IoT
 
 Este proyecto es parte de mi tesis titulada “DESARROLLO DE UN SISTEMA DE ALARMA Y DETECCIÓN INTELIGENTE DE ARMAS DE FUEGO MEDIANTE ANÁLISIS DE VIDEO CON TECNOLOGÍA IOT”, desarrollado utilizando Next.js en el frontend.
