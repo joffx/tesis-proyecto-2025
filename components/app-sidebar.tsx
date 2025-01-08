@@ -8,9 +8,11 @@ import {
   Command,
   Frame,
   GalleryVerticalEnd,
+  LayoutDashboardIcon,
   Map,
   PieChart,
   Settings2,
+  SirenIcon,
   SquareTerminal,
 } from "lucide-react";
 
@@ -52,14 +54,14 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Panel de Control",
       url: "#",
-      icon: SquareTerminal,
+      icon: LayoutDashboardIcon,
     },
     {
-      title: "Models",
+      title: "Alertas",
       url: "#",
-      icon: Bot,
+      icon: SirenIcon,
     },
   ],
 };
