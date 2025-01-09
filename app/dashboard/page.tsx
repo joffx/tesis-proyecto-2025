@@ -20,9 +20,10 @@ import {
 import { dateFormat } from "@/lib/dateFormat";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 export default function DasboardPage() {
-  const [reports, setReports] = useState([]);
+  const [reports, setReports] = useState<any[]>([]);
 
   const getReportsApi = async () => {
     const response = await getReports();
@@ -30,7 +31,17 @@ export default function DasboardPage() {
   };
 
   useEffect(() => {
+    // Llamar a la API una vez al cargar el componente
     getReportsApi();
+
+    // Configurar intervalo para llamar a la API cada 10 segundos
+    const intervalId = setInterval(() => {
+      getReportsApi();
+      toast.warning("Se ha actualizado la lista de reportes.");
+    }, 10000); // 10000 ms = 10 segundos
+
+    // Limpiar intervalo cuando el componente se desmonte
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -51,9 +62,9 @@ export default function DasboardPage() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <div className="grid grid-cols-5 gap-2 py-4">
+          <div className="grid grid-cols-5 gap-3 py-4">
             {reports.map((report: any) => (
-              <Card key={report.id}>
+              <Card key={report.id} className="shadow-xl">
                 <Image
                   className="p-2"
                   src={report.url}
@@ -61,18 +72,23 @@ export default function DasboardPage() {
                   height={300}
                   alt={report.url}
                 />
-                <div className="px-6 pb-2 w-full justify-center items-center mx-auto">
+                <div className="px-3 pb-2 w-full justify-center items-center mx-auto">
                   <div className="flex space-x-2">
                     <Badge
                       variant={report.type === "SI" ? "outline" : "destructive"}
                     >
                       {report.type === "SI" ? "Negativo" : "Positivo"}
                     </Badge>
-                    <div className="text-sm font-semibold">
-                      Presión: {report.precision}
+                    <div className="text-xs font-semibold my-auto">
+                      <span>Similitud:</span>
+                      <span>
+                        {(parseFloat(report.precision) * 100).toFixed(2)}%
+                      </span>
                     </div>
                   </div>
-                  <div className="text-sm">{dateFormat(report.createdAt)}</div>
+                  <div className="text-xs pt-2">
+                    {dateFormat(report.createdAt)}
+                  </div>
                 </div>
               </Card>
             ))}
