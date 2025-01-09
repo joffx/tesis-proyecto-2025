@@ -79,14 +79,14 @@ export default function DasboardPage() {
                     >
                       {report.type === "SI" ? "Negativo" : "Positivo"}
                     </Badge>
-                    <div className="text-xs font-semibold my-auto">
+                    <div className="text-xs font-semibold m-auto">
                       <span>Similitud:</span>
                       <span>
                         {(parseFloat(report.precision) * 100).toFixed(2)}%
                       </span>
                     </div>
                   </div>
-                  <div className="text-xs pt-2">
+                  <div className="text-xs pt-1.5 mx-auto flex justify-center">
                     {dateFormat(report.createdAt)}
                   </div>
                 </div>

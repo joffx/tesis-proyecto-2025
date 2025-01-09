@@ -86,7 +86,7 @@ export default function DasboardPage() {
                       </span>
                     </div>
                   </div>
-                  <div className="text-xs pt-2">
+                  <div className="text-xs pt-2 mx-auto flex justify-center bg-red-500">
                     {dateFormat(report.createdAt)}
                   </div>
                 </div>
