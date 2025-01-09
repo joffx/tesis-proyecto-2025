@@ -62,11 +62,11 @@ export default function DasboardPage() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <div className="grid grid-cols-5 gap-3 py-4">
+          <div className="grid xl:grid-cols-5 grid-cols-1 gap-3 py-4">
             {reports.map((report: any) => (
               <Card key={report.id} className="shadow-xl">
                 <Image
-                  className="p-2"
+                  className="p-2 mx-auto"
                   src={report.url}
                   width={300}
                   height={300}
