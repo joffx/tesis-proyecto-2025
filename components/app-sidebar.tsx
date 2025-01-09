@@ -55,12 +55,12 @@ const data = {
   navMain: [
     {
       title: "Panel de Control",
-      url: "#",
+      url: "/dashboard",
       icon: LayoutDashboardIcon,
     },
     {
       title: "Alertas",
-      url: "#",
+      url: "/alerts",
       icon: SirenIcon,
     },
   ],
