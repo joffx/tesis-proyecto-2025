@@ -60,7 +60,7 @@ const data = {
     },
     {
       title: "Alertas",
-      url: "/alerts",
+      url: "/dashboard",
       icon: SirenIcon,
     },
   ],
